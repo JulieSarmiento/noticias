@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+      
+      <div class="col-12">
+        <carousel>
+            <slide *ngFor="let noticia of noticias">
+              <img src="{{ noticia.urlToImage }}" alt="First slide" style="display: block; width: 100%;">
+              <div class="carousel-caption d-none d-md-block">
+                <h2 class="text-primary">{{ noticia.title }}</h2>
+                <p>{{ noticia.author }}</p>
+                <a (click)="verNoticia(noticia)" class="text-success">Leer Mas >></a>
+              </div>
+            </slide>
+          </carousel>
+      </div>
+    </div>
+  </div>
