@@ -1,9 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <a (click)="goBack()" class="btn-success p-4 my-3 text-white d-inline">Volver</a>
-      <img src="{{ noticiaOnly.urlToImage }}" class="img-fluid"/>
-    
+      <a (click)="goBack()" class="btn btn-success my-3 text-white d-inline-block">Volver</a>
+      <div class="detalle-img">
+        <img src="{{ noticiaOnly.urlToImage }}" class="img-fluid"/>
+      </div>
     <h1 class="display-4 text-primary">{{ noticiaOnly.title }}</h1>
     <span>{{ noticiaOnly.publishedAt }}</span>
     <p class="lead">{{ noticiaOnly.description }}</p>
