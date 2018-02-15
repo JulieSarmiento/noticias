@@ -1,0 +1,36 @@
+.swiper-image { 
+    display: inline-block;
+    max-height: 180px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 30px;
+    hr {
+      bottom: 3px;
+      width: 100%;
+      left: 0;
+      position: absolute;
+      height: 4px;
+      margin: 0;
+      background-color: limegreen;
+      z-index: 2;
+    }
+    img {
+      width: 100%;
+    }
+}
+.swiper-cap {
+    text-align: center;
+    h2 {
+        font-size: 24px;
+        color: rgb(4, 73, 53);
+    }
+}
+.absolute-link {
+    cursor: pointer;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 5;
+}

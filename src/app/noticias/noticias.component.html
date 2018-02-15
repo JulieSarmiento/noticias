@@ -1,17 +1,22 @@
 <div class="container">
-    <div class="row">
-      
+    <div class="row"> 
       <div class="col-12">
-        <carousel>
-            <slide *ngFor="let noticia of noticias">
-              <img src="{{ noticia.urlToImage }}" alt="First slide" style="display: block; width: 100%;">
-              <div class="carousel-caption d-none d-md-block">
-                <h2 class="text-primary">{{ noticia.title }}</h2>
-                <p>{{ noticia.author }}</p>
-                <a (click)="verNoticia(noticia)" class="text-success">Leer Mas >></a>
+          <div class="swiper-container test-css" [swiper]="config" [(index)]="index">
+            <div class="swiper-wrapper">
+              <div *ngFor="let noticia of noticias" class="swiper-slide">
+                <div class="swiper-image">
+                  <img src="{{ noticia.urlToImage }}" alt="image">
+                  <hr/>
+                </div>
+                <div class="swiper-cap">
+                    <h2>{{ noticia.title }}</h2>
+                    <p>{{ noticia.author }}</p>
+                </div>
+                <a (click)="verNoticia(noticia)" class="absolute-link"></a>
               </div>
-            </slide>
-          </carousel>
+            </div>
+            <div class="swiper-pagination" [hidden]="config.pagination === false"></div>
+          </div>
       </div>
     </div>
   </div>
