@@ -41,11 +41,6 @@ constructor( private noticiasServices: NoticiasService, private router: Router )
         }
     }
   };
-  private pagination: SwiperPaginationInterface = {
-    el: '.swiper-pagination',
-    clickable: true,
-    hideOnClick: false
-  };
 
   afterChange(e) {
     console.log('afterChange', e);
